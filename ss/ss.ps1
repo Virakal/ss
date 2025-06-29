@@ -1,6 +1,6 @@
 #   Scoop Super Search v6.2 2023.02.28
 #   (C) 2023 Oscar Lopez
-#   For more information visit: https://github.com/okibcn/ss"
+#   For more information visit: https://github.com/Virakal/ss"
 
 
 ## Finds texts in local scoop database
@@ -31,7 +31,7 @@ function ss {
     if (($oHelp) -OR (!$oRaw)) {
         Write-Host " Scoop Super Search v6.2 2023.02.28
  (C) 2023 Oscar Lopez
- ss -h for help. For more information visit: https://github.com/okibcn/ss"
+ ss -h for help. For more information visit: https://github.com/Virakal/ss"
     }
     if (($oHelp) -OR ($pattern.count -eq 0)) {
         Write-Host "
@@ -69,7 +69,7 @@ function ss {
     $oldPS = $PSVersionTable.PSEdition -ne 'Core'
     $DBfile = "$($env:TEMP)/AllAppsDB.7z"
     if ((-NOT (test-path $DBfile)) -OR (((Get-Date) - (gci $DBfile).LastWriteTime).Minutes -ge 30)) {
-        aria2c --allow-overwrite=true https://github.com/okibcn/ScoopMaster/releases/download/Databases/AllAppsDB.7z -d "$env:TEMP" | Out-Null
+        aria2c --allow-overwrite=true https://github.com/Virakal/ScoopMaster/releases/download/Databases/AllAppsDB.7z -d "$env:TEMP" | Out-Null
     }
     $csv = 7z e -so $DBfile AllAppsDB.csv
     $header = $csv[0]
@@ -77,7 +77,7 @@ function ss {
 
     # PREFILTER USING SWISS-CHEESE METHOD
     if ($oLast) {
-        $csv = if ($oldPS) { $csv | Select-String "okibcn/ScoopMaster" } else { $csv | Select-String "okibcn/ScoopMaster" -raw }
+        $csv = if ($oldPS) { $csv | Select-String "Virakal/ScoopMaster" } else { $csv | Select-String "Virakal/ScoopMaster" -raw }
     }
     if ($oOfficial) {
         $csv = if ($oldPS) { $csv | Select-String "Scoopinstaller/" } else { $csv | Select-String '"Scoopinstaller/' -raw }
@@ -146,7 +146,7 @@ function ss {
     Foreach ($line in $table) {
         $BucketURL = $line.Bucket
         $line.Bucket = $line.Bucket -Replace "(^.*/ScoopInstaller/.*)", "$cOfficial`$1$cNormal"
-        $line.Bucket = $line.Bucket -Replace "(^.*/okibcn/ScoopMaster)", "$cSMaster`$1$cNormal"
+        $line.Bucket = $line.Bucket -Replace "(^.*/Virakal/ScoopMaster)", "$cSMaster`$1$cNormal"
         if ( $hLocalBuckets.count -AND $hLocalBuckets[$BucketURL] ) {
             $line.Bucket = $line.Bucket -Replace $BucketURL, $hLocalBuckets[$BucketURL]
         }
