@@ -48,7 +48,7 @@ jobs:
         ############################
 
         cp LICENSE README* -t ss
-        VERSION=$(cat ss/ss.ps1 |  grep -Po "^#.*v([\d\.\-]+)" |  grep -Po "([\d\.\-]+)")        
+        VERSION=$(cat ss/ss.ps1 |  grep -Po "^#.*v([\d\.\-]+)" |  grep -Po "([\d\.\-]+)")
         7z a "./ss-v$VERSION.7z" ss/*
         echo "VERSION=${VERSION}" >>$GITHUB_ENV
 
