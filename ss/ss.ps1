@@ -18,9 +18,9 @@ function ss {
                 'r' { $oRaw = $true  ; break }
                 'o' { $oOfficial = $true  ; break }
                 'p' { $oPage = $true  ; break }
-                's' { 
+                's' {
                     $oExact = $true
-                    $oName = $true 
+                    $oName = $true
                 }
             }
         }
@@ -37,7 +37,7 @@ function ss {
         Write-Host "
  Usage: ss [ [ [-n] [ -s|-e ] [-l] [-o] [-p] [-r] ] | -h ] [Search_Patterns]
 
- ss searches in all the known buckets at a lighning speed. It not only searches 
+ ss searches in all the known buckets at a lighning speed. It not only searches
  in the name field, but also in the desscription. Regex and UTF-8 compatible.
  If you use more than one pattern, ss returns manifests matching all of them.
 
@@ -92,7 +92,7 @@ function ss {
         # prefilter non regex search
         if (!$oLast -AND !$oOfficial) { $csv = $csv | select -skip 1 }
         if (!$oRegex) {
-            $pattern | % { 
+            $pattern | % {
                 $csv = if ($oldPS) { $csv | Select-String "$_" } else { $csv | Select-String "$_" -raw }
             }
             # $pattern | % { $csv = $csv | Select-String -pattern "$_" -raw }
@@ -101,14 +101,14 @@ function ss {
         $table = (echo "$header"$csv) | ConvertFrom-Csv
         if ($oName) {
             # search name field only
-            $pattern | % { 
+            $pattern | % {
                 $pattern_ = $_
                 $table = $table | ? { ($($_.Name) -match "$pattern_" ) }
             }
         }
         else {
             # search name and description
-            $pattern | % { 
+            $pattern | % {
                 $pattern_ = $_
                 $table = $table | ? { ($($_.Name) -match "$pattern_" ) -OR ($($_.Description) -match "$pattern_") }
             }
@@ -123,7 +123,7 @@ function ss {
     #PRINT OUTPUT
 
     if ($oRaw) {
-        return ($table | Select-Object Name, Version, Autoupdate, Homepage, Bucket, Description) 
+        return ($table | Select-Object Name, Version, Autoupdate, Homepage, Bucket, Description)
     }
     # Colorize if we are not in raw mode
     $cNormal = "$([char]27)[37m"      # White
@@ -152,7 +152,7 @@ function ss {
         }
         if ($line.Autoupdate -eq 'A') {$line.Version = "$cAutoupdate$($line.Version)$cNormal"}
     }
-        
+
     if ($oPage) {
         $table | Select-Object Name, Version, Homepage, Bucket, Description |  Format-Table
     }
