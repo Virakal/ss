@@ -1,4 +1,4 @@
-# SS (Scoop **Super Search**) 
+# SS (Scoop **Super Search**)
 
 <br/>
 
@@ -37,7 +37,7 @@ Most Scoop search tools provide results only referred to the app name. SS can se
 
 <br/>
 
-### - 🔍&🔍 **Match All keywords capability.** 
+### - 🔍&🔍 **Match All keywords capability.**
 <br/>
 
 Most Scoop search systems provide results for a single keyword. SS can search combinations of OR and AND.
@@ -137,8 +137,8 @@ ____
 Usage: ss [ [ [-n] [ -s|-e ] [-l] [-o] [-p] [-r] ] | -h ] [Search_Patterns]
 
  **SS** searches in all the known buckets at a lighning speed. It not only searches
- in the name field, but also in the desscription. Regex and UTF-8 compatible. 
- 
+ in the name field, but also in the desscription. Regex and UTF-8 compatible.
+
  If you use more than one pattern, **SS** returns manifests matching all of them.
 ```
  Options:
@@ -170,11 +170,11 @@ ss scoop search
 ```
 - Search for an app in which the name contains both 'nvidia' AND 'driver'
 ```pwsh
-ss -n nvidia driver 
+ss -n nvidia driver
 ```
 - Simple search for the **ss** app
 ```pwsh
-ss -s ss 
+ss -s ss
 ```
 - Returns apps containing 'tool' and, 'nvidia' or 'radeon'
 ```pwsh
@@ -182,17 +182,17 @@ ss -n "nvidia|radeon" tool
 ```
 - Get the latest manifests of scoop search utilities
 ```pwsh
-ss -l search scoop 
+ss -l search scoop
 ```
 - latests versions of apps ending in 'ss' starting with 's'
 ```pwsh
-ss -n -l -e ss$ ^s 
+ss -n -l -e ss$ ^s
 ```
 - UTF-8 search of all the apps containing the word 音乐 (music) in the description.
 ```pwsh
-ss -l 音乐 
+ss -l 音乐
 ```
 - stores in the `$apps` variable a PSObject with all the Scoop manifests — more than 52,000.
 ```pwsh
-$apps = ss -r .* 
+$apps = ss -r .*
 ```
