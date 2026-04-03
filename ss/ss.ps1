@@ -1,4 +1,4 @@
-#   Scoop Super Search v6.2 2023.02.28
+#   Scoop Super Search v6.3 2026.04.03
 #   (C) 2023 Oscar Lopez
 #   For more information visit: https://github.com/Virakal/ss"
 
@@ -29,8 +29,8 @@ function ss {
         }
     }
     if (($oHelp) -OR (!$oRaw)) {
-        Write-Host " Scoop Super Search v6.2 2023.02.28
- (C) 2023 Oscar Lopez
+        Write-Host " Scoop Super Search v6.3 2026.04.03
+ (C) 2026 Oscar Lopez
  ss -h for help. For more information visit: https://github.com/Virakal/ss"
     }
     if (($oHelp) -OR ($pattern.count -eq 0)) {
