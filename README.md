@@ -101,7 +101,7 @@ ____
 ## **INSTALLATION**
 <br/>
 
-This app is a CLI utility for the Scoop framework and requires [Scoop ackage Manager](http://scoop.sh) as a pre-requisite.
+This app is a CLI utility for the Scoop framework and requires [Scoop package Manager](http://scoop.sh) as a pre-requisite.
 
 From there the installation is straightforward.
 
