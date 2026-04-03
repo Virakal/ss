@@ -21,7 +21,7 @@ ____
 
 <br/>
 
-**Scoop Super Search** is capable of searching in more than 800 buckets and 52,000 app manifests in internet. It uses the lightning fast [ScoopMaster database](https://github.com/Virakal/ScoopMaster) to provide intantaneous results in less than 500 ms.
+**Scoop Super Search** is capable of searching in more than 800 buckets and 52,000 app manifests in internet. It uses the lightning fast [ScoopMaster database](https://github.com/Virakal/ScoopMaster) to provide instantaneous results in less than 500 ms.
 
 <br/>
 
@@ -49,14 +49,14 @@ Most Scoop search systems provide results for a single keyword. SS can search co
 ### - 🔧 **Complex REGEX search patterns for advanced users**
 <br/>
 
-**SS** also supports extended **REGEX** pattern seaches, accepting even multiple regex patterns.
+**SS** also supports extended **REGEX** pattern searches, accepting even multiple regex patterns.
 
 <br/>
 
 ### - **(音乐) UTF-8 compatible**
 <br/>
 
-**SS** accepts searches in UTF-8 encoding, supporting searches in descriptions when the language uses suplemental Unicode pages. Please note that this feature requires a UTF-8 capable terminal such as Windows Terminal.
+**SS** accepts searches in UTF-8 encoding, supporting searches in descriptions when the language uses supplemental Unicode pages. Please note that this feature requires a UTF-8 capable terminal such as Windows Terminal.
 
 <br/>
 
@@ -70,7 +70,7 @@ Typical search utilities provide only the list of matches including all the vers
 ### - 🎨 **Color coding for quick reference**
 <br/>
 
-The result is displated with color coding for easy identigication of the matched words, the official buckets, and the bucket of the newer manifest available for each app.
+The result is displayed with color coding for easy identification of the matched words, the official buckets, and the bucket of the newer manifest available for each app.
 
 <br/>
 
@@ -91,7 +91,7 @@ The result is displated with color coding for easy identigication of the matched
 ### - 🌐 **Backward compatible with Windows PowerShell 5.1**
 <br/>
 
-**SS** Is compatible with the powerfull and fast Powershell Core from MS Store, or with the default Windows Powrshell included with Windows 10/11.
+**SS** Is compatible with the powerfull and fast Powershell Core from MS Store, or with the default Windows Powershell included with Windows 10/11.
 
 <br/>
 
@@ -138,7 +138,7 @@ ____
 
 Usage: ss [ [ [-n] [ -s|-e ] [-l] [-o] [-p] [-r] ] | -h ] [Search_Patterns]
 
- **SS** searches in all the known buckets at a lighning speed. It not only searches
+ **SS** searches in all the known buckets at a lightning speed. It not only searches
  in the name field, but also in the desscription. Regex and UTF-8 compatible.
 
  If you use more than one pattern, **SS** returns manifests matching all of them.

@@ -37,7 +37,7 @@ function ss {
         Write-Host "
  Usage: ss [ [ [-n] [ -s|-e ] [-l] [-o] [-p] [-r] ] | -h ] [Search_Patterns]
 
- ss searches in all the known buckets at a lighning speed. It not only searches
+ ss searches in all the known buckets at a lightning speed. It not only searches
  in the name field, but also in the desscription. Regex and UTF-8 compatible.
  If you use more than one pattern, ss returns manifests matching all of them.
 
